@@ -1,0 +1,70 @@
+@startuml ATM_UseCase_Model
+left to right direction
+skinparam actorStyle awesome
+skinparam packageStyle rectangle
+
+' Actors
+actor "Customer" as customer
+actor "Bank System" as bank << System >>
+
+' System boundary
+rectangle "ATM System" {
+    package "Card Operations" {
+        usecase "Insert Card" as UC1
+        usecase "Validate PIN" as UC2
+    }
+    
+    package "Transaction Operations" {
+        usecase "Select Transaction" as UC3
+        usecase "Withdraw Cash" as UC4
+        usecase "Deposit Cash" as UC5
+        usecase "Check Balance" as UC6
+    }
+    
+    package "Support Operations" {
+        usecase "Print Receipt" as UC7
+        usecase "Update Account Balance" as UC8
+        usecase "Dispense Cash" as UC9
+    }
+}
+
+' Customer interactions
+customer --> UC1
+customer --> UC2
+customer --> UC3
+customer --> UC4
+customer --> UC5
+customer --> UC6
+
+' Bank system interactions
+bank --> UC2 : << validates >>
+bank --> UC4 : << authorizes >>
+bank --> UC5 : << processes >>
+bank --> UC6 : << provides >>
+bank --> UC8 : << updates >>
+
+' Include relationships
+UC1 ..> UC2 : << include >>
+UC2 ..> UC3 : << include >>
+UC4 ..> UC7 : << include >>
+UC5 ..> UC7 : << include >>
+UC6 ..> UC7 : << include >>
+UC4 ..> UC8 : << include >>
+UC5 ..> UC8 : << include >>
+UC4 ..> UC9 : << include >>
+
+' Notes
+note right of UC2
+  PIN validation required
+  before any transaction
+end note
+
+note bottom of UC7
+  Receipt includes:
+  - Transaction details
+  - Timestamp
+  - Card number
+  - Account number
+end note
+
+@enduml
