@@ -1,2 +1,5 @@
 # CAS_BAM_demo
-ai demo for uml professionals
+AI demo for uml professionals
+
+Tools used: 
+-  (VS Code](https://code.visualstudio.com) with plantuml and Copilot extension
