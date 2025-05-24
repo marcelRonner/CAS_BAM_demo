@@ -1,0 +1,14 @@
+You are a professional business analyst and about to design a new system.
+Follow the next steps and create all the result files in a new folder which has the name of the ai model which is used. 
+
+1. Evaluate the picture file ZHAWtest.png and create a domain model diagram in plantuml format
+
+2. Create a use case diagram based on the domain model for the new system. 
+
+3. Create a list of potential user stories in a text file and group the user stories per use case
+
+4. Create a persona description for every actor in the usecase diagram and store it in a text file. 
+
+5. For every use case identified in the use case diagram from step 2, create a separate activity diagram in PlantUML format. Each activity diagram must cover all user stories associated with its use case.
+ 
+6. Create a state chart diagram in plantuml format for every entry in the domain model. Make sure that every state transition can be found in the activity diagram (go back and edit the activity diagram if necesary)
