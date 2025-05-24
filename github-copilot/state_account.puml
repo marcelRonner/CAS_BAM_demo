@@ -1,0 +1,28 @@
+@startuml
+' State Chart for Account
+title Account State Chart
+
+[*] --> Created
+Created --> Active : Initial deposit made
+Created --> Dormant : No activity for 90 days
+Created --> Closed : Customer request before activation
+
+Active --> InTransaction : Transaction initiated
+Active --> Frozen : Suspicious activity detected
+Active --> Dormant : No activity for 90 days
+Active --> Closed : Customer request
+
+InTransaction --> Active : Transaction completed
+InTransaction --> OnHold : Pending authorization
+OnHold --> InTransaction : Authorization received
+OnHold --> Frozen : Authorization denied
+
+Dormant --> Active : New transaction
+Dormant --> Closed : No activity for 1 year
+
+Frozen --> Active : Issue resolved
+Frozen --> Closed : Unresolvable issue
+
+Closed --> [*]
+
+@enduml

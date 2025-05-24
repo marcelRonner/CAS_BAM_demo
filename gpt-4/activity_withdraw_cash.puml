@@ -1,0 +1,17 @@
+@startuml
+' Activity Diagram: Withdraw Cash
+start
+:Insert Card;
+:Enter PIN;
+:Select Withdraw Cash;
+:Enter Amount;
+:ATM verifies account and amount;
+if (Sufficient funds?) then (yes)
+  :Dispense Cash;
+  :Print Receipt;
+else (no)
+  :Display Error Message;
+endif
+:Return Card;
+stop
+@enduml

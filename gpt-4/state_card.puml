@@ -1,0 +1,9 @@
+@startuml
+' State Chart: Card
+[*] --> Inserted
+Inserted --> Verified : PIN entered
+Verified --> Ejected : Transaction complete
+Verified --> Blocked : PIN incorrect 3 times
+Ejected --> [*]
+Blocked --> [*]
+@enduml

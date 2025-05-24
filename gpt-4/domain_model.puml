@@ -1,0 +1,32 @@
+@startuml
+' Domain Model Diagram for ATM System
+
+class Card {
+  cardNumber: String
+  expiryDate: Date
+  pin: String
+}
+
+class ATM {
+  atmId: String
+  location: String
+}
+
+class Transaction {
+  transactionId: String
+  date: Date
+  amount: Double
+  type: String
+}
+
+class Receipt {
+  receiptId: String
+  printDate: Date
+  details: String
+}
+
+Card "1" -- "*" Transaction : initiates >
+ATM "1" -- "*" Transaction : processes >
+Transaction "1" -- "1" Receipt : generates >
+
+@enduml

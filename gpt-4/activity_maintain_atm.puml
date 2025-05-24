@@ -1,0 +1,10 @@
+@startuml
+' Activity Diagram: Maintain ATM
+start
+:Bank Employee logs in;
+:Perform Maintenance Tasks;
+:Refill Cash/Receipt Paper;
+:Run Diagnostics;
+:Log out;
+stop
+@enduml

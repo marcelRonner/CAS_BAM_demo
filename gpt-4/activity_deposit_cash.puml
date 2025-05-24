@@ -1,0 +1,13 @@
+@startuml
+' Activity Diagram: Deposit Cash
+start
+:Insert Card;
+:Enter PIN;
+:Select Deposit Cash;
+:Insert Cash;
+:ATM counts and verifies cash;
+:Update Account Balance;
+:Print Receipt;
+:Return Card;
+stop
+@enduml

@@ -1,0 +1,29 @@
+@startuml
+' State Chart for Transaction
+title Transaction State Chart
+
+[*] --> Initiated
+Initiated --> Validating : Card authenticated
+Validating --> Processing : Validation passed
+Validating --> Declined : Validation failed
+Declined --> [*]
+
+Processing --> Approved : Requirements met
+Processing --> Declined : Requirements not met
+Approved --> Executing : Processing transaction
+
+Executing --> Completed : Transaction executed successfully
+Executing --> Failed : Error during execution
+Failed --> Reverting : Rollback initiated
+Reverting --> Reversed : Rollback successful
+Reverting --> ErrorState : Rollback failed
+ErrorState --> ManualIntervention : Bank notified
+
+Completed --> Recorded : Database updated
+Recorded --> [*]
+Reversed --> Recorded
+
+ManualIntervention --> Resolved : Issue fixed
+Resolved --> Recorded
+
+@enduml

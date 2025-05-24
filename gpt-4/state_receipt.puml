@@ -1,0 +1,6 @@
+@startuml
+' State Chart: Receipt
+[*] --> Generated
+Generated --> Printed : Print command
+Printed --> [*]
+@enduml

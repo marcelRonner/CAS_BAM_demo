@@ -1,0 +1,59 @@
+@startuml
+' Domain Model Diagram for ATM System based on ZHAWtest.png
+
+class Card {
+  cardNumber: String
+  expiryDate: Date
+  pin: String
+  status: String
+}
+
+class ATM {
+  atmId: String
+  location: String
+  cashAvailable: Double
+  status: String
+}
+
+class Transaction {
+  transactionId: String
+  date: Date
+  amount: Double
+  type: String
+  status: String
+}
+
+class Receipt {
+  receiptId: String
+  printDate: Date
+  details: String
+  transactionReference: String
+}
+
+class Account {
+  accountId: String
+  balance: Double
+  owner: String
+}
+
+class Customer {
+  customerId: String
+  name: String
+  contactInfo: String
+}
+
+class Bank {
+  bankId: String
+  name: String
+}
+
+Customer "1" -- "*" Card : owns >
+Card "1" -- "*" Transaction : initiates >
+ATM "1" -- "*" Transaction : processes >
+Transaction "1" -- "0..1" Receipt : generates >
+Account "1" -- "*" Transaction : affects >
+Bank "1" -- "*" ATM : operates >
+Bank "1" -- "*" Account : manages >
+Customer "1" -- "*" Account : owns >
+
+@enduml

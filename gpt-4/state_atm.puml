@@ -1,0 +1,12 @@
+@startuml
+' State Chart: ATM
+[*] --> Idle
+Idle --> Processing : Card inserted
+Processing --> Dispensing : Cash withdrawal
+Processing --> Accepting : Cash deposit
+Dispensing --> Idle : Cash dispensed
+Accepting --> Idle : Cash accepted
+Processing --> OutOfService : Error detected
+OutOfService --> Maintenance : Technician logs in
+Maintenance --> Idle : Maintenance complete
+@enduml

@@ -1,0 +1,39 @@
+USER STORIES FOR ATM SYSTEM
+
+WITHDRAW CASH:
+- As a customer, I want to insert my card into the ATM so that I can access my account.
+- As a customer, I want to enter my PIN securely so that only I can access my account.
+- As a customer, I want to select a withdraw cash option so that I can access my funds.
+- As a customer, I want to specify the amount to withdraw so that I can get the exact amount I need.
+- As a customer, I want the ATM to verify if I have sufficient funds before dispensing cash to prevent overdraft.
+- As a customer, I want to receive my cash promptly after authorization to save time.
+- As a customer, I want to choose whether to print a receipt so that I can keep a record if needed.
+- As a customer, I want my card returned safely after my transaction is complete.
+
+CHECK BALANCE:
+- As a customer, I want to view my current account balance so that I know how much money I have available.
+- As a customer, I want to see my recent transactions on the balance screen to track my spending.
+- As a customer, I want the option to print my balance information for my records.
+- As a customer, I want to check my balance without necessarily making any withdrawals or deposits.
+
+DEPOSIT CASH:
+- As a customer, I want to securely deposit cash into my account through the ATM.
+- As a customer, I want to insert bills of various denominations and have them correctly counted.
+- As a customer, I want to confirm the counted amount before finalizing my deposit.
+- As a customer, I want my account to be updated immediately after making a deposit.
+- As a customer, I want to receive a receipt confirming my deposit transaction.
+
+PRINT RECEIPT:
+- As a customer, I want receipts to include transaction details such as date, time, location, and amount.
+- As a customer, I want receipts to show my remaining account balance after the transaction.
+- As a customer, I want the option to decline a receipt to reduce paper waste.
+- As a customer, I want the receipts to be printed clearly and legibly.
+
+MAINTAIN ATM:
+- As a bank employee, I want to refill the cash in the ATM when it's running low.
+- As a bank employee, I want to replace receipt paper when it's depleted.
+- As a bank employee, I want to perform diagnostic tests on the ATM to ensure it's functioning correctly.
+- As a bank employee, I want to access maintenance logs to track the ATM's performance and issues.
+- As a bank employee, I want to securely access the ATM's internal components for repairs.
+- As a bank employee, I want to be alerted when an ATM requires maintenance or is malfunctioning.
+- As a bank, I want to monitor ATMs remotely to detect any suspicious activities or technical issues.

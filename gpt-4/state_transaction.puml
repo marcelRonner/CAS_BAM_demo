@@ -1,0 +1,9 @@
+@startuml
+' State Chart: Transaction
+[*] --> Initiated
+Initiated --> Processing : Details entered
+Processing --> Completed : Success
+Processing --> Failed : Error/Insufficient funds
+Completed --> [*]
+Failed --> [*]
+@enduml

@@ -1,0 +1,12 @@
+@startuml
+' Activity Diagram: Check Balance
+start
+:Insert Card;
+:Enter PIN;
+:Select Check Balance;
+:ATM retrieves account balance;
+:Display Balance;
+:Optionally Print Receipt;
+:Return Card;
+stop
+@enduml
