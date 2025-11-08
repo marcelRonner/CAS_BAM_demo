@@ -1,0 +1,19 @@
+Step 4 - Persona descriptions for actors in the use case diagram
+
+Customer (Primary Actor)
+- Name: Anna Müller
+- Age: 38
+- Role: Retail banking customer
+- Tech familiarity: Comfortable with card-based ATMs
+- Goals: Quickly withdraw cash, receive a receipt when needed, keep card secure
+- Frustrations: Slow machines, unclear prompts, long queues
+- Typical scenario: Anna visits the ATM, inserts her card, authenticates with PIN, withdraws cash, optionally prints a receipt, and leaves
+
+Maintenance (Secondary Actor)
+- Name: Markus Steiner
+- Age: 45
+- Role: ATM maintenance technician
+- Tech familiarity: High; performs hardware refills and software checks
+- Goals: Minimize downtime, refill cash and paper, diagnose faults quickly
+- Frustrations: Poor diagnostic logs, lack of remote status
+- Typical scenario: Markus authenticates to maintenance mode, refills cash and receipt paper, checks logs, and resumes normal operation

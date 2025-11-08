@@ -1,0 +1,16 @@
+@startuml
+|Maintenance|
+start
+:Authenticate as technician;
+:Enter maintenance mode;
+:Inspect cash cassettes and paper;
+if (Refill required?) then (yes)
+  :Refill cash and paper;
+endif
+:Run diagnostics;
+if (Faults found?) then (yes)
+  :Log issues and repair as needed;
+endif
+:Exit maintenance mode;
+stop
+@enduml

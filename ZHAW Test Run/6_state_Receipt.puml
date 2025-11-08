@@ -1,0 +1,9 @@
+@startuml
+' State chart for Receipt entity
+[*] --> NotPrinted
+NotPrinted --> Printing : print requested
+Printing --> Printed : successful
+Printing --> PrintFailed : printer offline or jam
+PrintFailed --> NotPrinted : retry requested
+Printed --> Archived
+@enduml

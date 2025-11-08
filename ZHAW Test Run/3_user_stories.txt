@@ -1,0 +1,61 @@
+Step 3 - User stories grouped by use case
+
+Use case: Initiate Transaction
+- As a Customer, I want to insert my card so that I can start a transaction.
+  Acceptance Criteria (Gherkin):
+  Given the ATM is idle
+  When the Customer inserts a valid card
+  Then the system shows the welcome screen and prompts for authentication
+
+- As a Customer, I want to select a transaction type (e.g., withdraw) so that I can perform banking operations.
+  Acceptance Criteria (Gherkin):
+  Given the Customer is authenticated
+  When the Customer selects "Withdraw"
+  Then the system displays the withdraw options and prompts for amount
+
+Use case: Authenticate Card
+- As a Customer, I want to enter my PIN so the ATM can verify my identity.
+  Acceptance Criteria (Gherkin):
+  Given the Customer has inserted a valid card
+  When the Customer enters a correct PIN
+  Then the system authenticates the customer and allows access to transactions
+
+- As a Customer, I want the ATM to block after 3 invalid PIN attempts so my account is protected.
+  Acceptance Criteria (Gherkin):
+  Given the Customer has entered 3 invalid PINs
+  When the third invalid attempt is processed
+  Then the ATM blocks the card and displays an instruction to contact the bank
+
+Use case: Withdraw Cash
+- As a Customer, I want to enter an amount and have the ATM dispense cash if funds are sufficient.
+  Acceptance Criteria (Gherkin):
+  Given the Customer is authenticated
+  When the Customer requests $100 and sufficient funds exist
+  Then the ATM dispenses $100 and records the transaction as successful
+
+- As a Customer, I want an error if requested amount exceeds my balance so I don't get incorrect dispensation.
+  Acceptance Criteria (Gherkin):
+  Given the Customer is authenticated
+  When the Customer requests an amount larger than the available balance
+  Then the ATM shows an "insufficient funds" message and does not dispense cash
+
+Use case: Print Receipt
+- As a Customer, I want an option to print a receipt after a transaction so I have a paper record.
+  Acceptance Criteria (Gherkin):
+  Given a transaction completes successfully
+  When the Customer selects "Print Receipt"
+  Then the ATM prints a receipt containing transaction details
+
+Use case: Eject Card
+- As a Customer, I want the card returned after the transaction so I can keep it.
+  Acceptance Criteria (Gherkin):
+  Given the transaction is finished OR the customer cancels
+  When the ATM completes the flow
+  Then the ATM ejects the card and returns to the idle state
+
+Use case: Maintain ATM
+- As a Maintenance Operator, I want to put the ATM into maintenance mode to perform refills and repairs.
+  Acceptance Criteria (Gherkin):
+  Given the operator is authenticated for maintenance
+  When the operator selects "Enter Maintenance Mode"
+  Then the ATM stops normal customer operations and exposes maintenance functions

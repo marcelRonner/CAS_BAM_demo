@@ -1,9 +1,0 @@
-@startuml
-' Activity Diagram: Print Receipt
-start
-:Select Print Receipt;
-:ATM retrieves transaction details;
-:Print Receipt;
-:Return Card (if applicable);
-stop
-@enduml

@@ -1,0 +1,8 @@
+@startuml
+|ATM|
+start
+:Complete transaction cleanup;
+:Eject card to customer;
+:Return to idle state;
+stop
+@enduml

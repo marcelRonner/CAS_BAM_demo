@@ -1,0 +1,10 @@
+@startuml
+' State chart for Card entity
+[*] --> Idle
+Idle --> Inserted : card inserted
+Inserted --> Authenticated : PIN correct
+Inserted --> Blocked : 3 invalid PINs
+Authenticated --> Ejected : transaction complete
+Blocked --> Ejected : maintenance or bank release
+Ejected --> Idle
+@enduml

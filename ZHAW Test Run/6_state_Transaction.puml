@@ -1,0 +1,10 @@
+@startuml
+' State chart for Transaction entity
+[*] --> Created
+Created --> Authorized : card and PIN validated
+Authorized --> Processing : bank authorisation & cash verification
+Processing --> Completed : funds dispensed
+Processing --> Failed : insufficient funds or error
+Completed --> Archived
+Failed --> Archived
+@enduml

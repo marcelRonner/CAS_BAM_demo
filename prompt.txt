@@ -1,14 +1,21 @@
 You are a professional business analyst and about to design a new system.
-Follow the next steps and create all the result files in a new folder which has the name of the ai model which is used. 
 
-1. Evaluate the picture file ZHAWtest.png and create a domain model diagram in plantuml format
+Follow the next steps and create all the result files in a new folder on the same level as this file with the name "ZHAW Test Run".  
+
+Give every result file a prefix of the step which was used to create it.
+
+Adhere strictly to easy plantuml syntax and make sure every diagram is rendered to a PNG file with the exact same name (including prefix) and store it in the same folder. Use local plantuml rendering for this and issue the command at the end once the diagrams are created. 
+
+1. Evaluate the picture file ZHAWtest.png and create a domain model diagram in plantuml format.
 
 2. Create a use case diagram based on the domain model for the new system. 
 
-3. Create a list of potential user stories in a text file and group the user stories per use case
+3. Create a list of potential user stories in a text file and group the user stories per use case. Add one acceptance criteria per user story in gherkin language. 
 
 4. Create a persona description for every actor in the usecase diagram and store it in a text file. 
 
 5. For every use case identified in the use case diagram from step 2, create a separate activity diagram in PlantUML format. Each activity diagram must cover all user stories associated with its use case.
  
 6. Create a state chart diagram in plantuml format for every entry in the domain model. Make sure that every state transition can be found in the activity diagram (go back and edit the activity diagram if necesary)
+
+7. Create a list of 10 potential non-fonctional requirements in a text file and group them by ISO 25010 categories

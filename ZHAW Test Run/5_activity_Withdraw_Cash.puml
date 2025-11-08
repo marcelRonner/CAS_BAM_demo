@@ -1,0 +1,33 @@
+@startuml
+|Customer|
+start
+:Select "Withdraw";
+:Enter amount;
+partition ATM {
+  :Check funds availability;
+}
+if (Sufficient funds?) then (yes)
+  partition ATM {
+    :Dispense cash;
+    :Record transaction as COMPLETED;
+  }
+  if (Customer requests receipt?) then (yes)
+    partition ATM {
+      :Compose and print receipt;
+    }
+  else (no)
+    :Skip receipt;
+  endif
+  :Eject Card;
+  stop
+else (no)
+  :Show "Insufficient funds";
+  :Offer retry or cancel;
+  if (retry) then (yes)
+    :Enter amount;
+  else (no)
+    :Eject Card;
+    stop
+  endif
+endif
+@enduml

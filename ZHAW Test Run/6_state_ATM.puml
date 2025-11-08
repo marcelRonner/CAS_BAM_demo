@@ -1,0 +1,9 @@
+@startuml
+' State chart for ATM entity
+[*] --> Idle
+Idle --> Serving : card inserted
+Serving --> Idle : transaction complete
+Serving --> OutOfService : critical fault or maintenance
+OutOfService --> Maintenance : technician access
+Maintenance --> Idle : maintenance finished
+@enduml

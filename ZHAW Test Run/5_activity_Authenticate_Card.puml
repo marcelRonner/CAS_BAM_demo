@@ -1,0 +1,19 @@
+@startuml
+|Customer|
+start
+:Enter PIN;
+if (PIN correct?) then (yes)
+  :Show transaction menu;
+  stop
+else (no)
+  :Increment failure counter;
+  if (counter >= 3) then (yes)
+    :Block Card and display contact message;
+    :Eject Card;
+    stop
+  else (no)
+    :Prompt for PIN again;
+    -> Enter PIN
+  endif
+endif
+@enduml

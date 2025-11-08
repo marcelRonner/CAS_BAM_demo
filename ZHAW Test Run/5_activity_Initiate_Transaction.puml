@@ -1,0 +1,15 @@
+@startuml
+|Customer|
+start
+:Insert Card;
+note right: Card detected by ATM
+:ATM shows welcome screen;
+if (Card valid?) then (yes)
+  :Prompt for PIN;
+  -> Authenticate Card
+else (no)
+  :Eject Card;
+  stop
+endif
+stop
+@enduml

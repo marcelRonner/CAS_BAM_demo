@@ -1,0 +1,26 @@
+Step 7 - 10 potential non-functional requirements grouped by ISO/IEC 25010 categories
+
+Performance efficiency
+- NFR-Perf-01: The ATM shall complete PIN authentication within 2 seconds under normal load.
+- NFR-Perf-02: Cash dispensing operation (from confirmation to dispense start) shall not exceed 5 seconds.
+
+Reliability
+- NFR-Reliability-01: The ATM shall have an uptime of 99.5% monthly, excluding scheduled maintenance.
+
+Security
+- NFR-Sec-01: All card data and PIN entry shall be handled according to PCI-DSS standards and must be encrypted in transit and at rest.
+- NFR-Sec-02: After 3 consecutive invalid PIN entries, the card shall be blocked and flagged for review.
+
+Usability
+- NFR-Usab-01: User prompts and on-screen text shall be readable at a minimum of 14pt font and available in at least two languages.
+
+Maintainability
+- NFR-Maint-01: Diagnostic logs for the last 30 days shall be exportable by maintenance staff in a standard format (CSV or JSON).
+
+Compatibility
+- NFR-Compat-01: The ATM software shall integrate with the bank's authorization API using TLS 1.2+ and JSON REST endpoints.
+
+Portability
+- NFR-Port-01: The application should be deployable on both Linux and Windows hosts with platform-specific installers or containers.
+
+(These are initial suggestions; exact thresholds may be refined during non-functional requirement workshops.)

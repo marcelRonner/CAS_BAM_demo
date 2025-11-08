@@ -1,0 +1,13 @@
+@startuml
+|ATM|
+start
+:Compose receipt content (transaction details);
+if (Printer online?) then (yes)
+  :Print receipt;
+  :Mark receipt as PRINTED;
+else (no)
+  :Log print failure;
+  :Offer to show on screen or retry later;
+endif
+stop
+@enduml

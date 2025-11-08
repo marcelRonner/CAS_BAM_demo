@@ -1,0 +1,23 @@
+@startuml
+' Use case diagram for ATM system
+left to right direction
+actor Customer as C
+actor Maintenance as M
+
+rectangle "ATM System" {
+  (Initiate Transaction) as IT
+  (Authenticate Card) as AC
+  (Withdraw Cash) as WC
+  (Print Receipt) as PR
+  (Eject Card) as EC
+  (Maintain ATM) as MAINT
+
+  C -- IT
+  C -- AC
+  C -- WC
+  C -- PR
+  C -- EC
+
+  M -- MAINT
+}
+@enduml

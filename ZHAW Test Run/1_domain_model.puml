@@ -1,0 +1,34 @@
+@startuml
+' Domain model for ATM transaction system
+' Entities taken from provided sketch: Card, Transaction, ATM, Receipt
+
+class Card {
+  +cardNumber: String
+  +holderName: String
+  +expiryDate: Date
+}
+
+class ATM {
+  +atmId: String
+  +location: String
+}
+
+class Transaction {
+  +transactionId: String
+  +type: String
+  +amount: Decimal
+  +timestamp: DateTime
+  +status: String
+}
+
+class Receipt {
+  +receiptId: String
+  +date: DateTime
+  +details: String
+}
+
+Card "1" -- "0..*" Transaction : initiates
+ATM "1" -- "0..*" Transaction : processes
+Transaction "1" -- "0..1" Receipt : generates
+
+@enduml
